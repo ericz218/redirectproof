@@ -1,0 +1,11 @@
+name: RedirectProof
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+      - uses: ericz218/redirectproof@v0.1.0
